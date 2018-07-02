@@ -1,5 +1,5 @@
 ---
-title: vim
+title: vim指令
 date: 2018-06-30 21:50:51
 tags: vim
 categories: software
@@ -8,6 +8,7 @@ categories: software
 #vim配置了解一下
 
 ---
+<!-- more -->
 - 移动
 	* jklh
 	* $(本行末尾) 0(本行开始) ^(本行非空格的第一个字符)
@@ -18,3 +19,6 @@ categories: software
 - 插入
 	* i 插入
 	* o 当前行下一行插入 O当前行下一行插入
+	* A 行尾插入 I 行首插入
+	* J 下一行连接到当前行，中间多一个空格(x删除)
+	
