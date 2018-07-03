@@ -5,7 +5,7 @@ tags: vim
 categories: software
 ---
 
-#vim配置了解一下
+# vim配置了解一下
 
 ---
 <!-- more -->
