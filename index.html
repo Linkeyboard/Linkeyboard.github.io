@@ -365,15 +365,28 @@
 <h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><ul>
 <li>二次代价函数<ul>
 <li>$$c=\frac{(y-a)^2}{2}$$</li>
+<li>人工神经元在犯错比较明显的时候学习速率很慢</li>
+<li>求导 $$\frac{\partial C}{\partial w}=(a-y)\sigma’(z)x$$ $$\frac{\partial C}{\partial b}=(a-y)\sigma’(z)$$</li>
 </ul>
 </li>
 <li>交叉熵代价函数<ul>
 <li>$$c=-\frac{1}{n}\sum_{x}{y\ln{a}+(1-y)\ln(1-a)}$$</li>
 <li>每一项都是非负，对数函数定义域a的范围是(0,1)</li>
 <li>目标值和真实值很近时，代价趋近于0</li>
-<li></li>
+<li>$$\sigma’(z)=\sigma(z)(1-\sigma(z))$$<ul>
+<li>求导 $$\frac{\partial C}{\partial w_j} = \frac{1}{n}\sum_x x_j(\sigma(z)-y)$$ $$\frac{\partial C}{\partial b} = \frac{1}{n}\sum_x (\sigma(z)-y)$$</li>
+<li>从导数中可以看到学习速率加快</li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h3><ul>
+<li>四个参数可以画出来一头大象，五个参数能让他卷鼻子（Joke :D）</li>
+<li>代价函数持续减小但是测试分类正确率波动稳步不前，单纯记忆训练集合，没有对数字本质进行理解，泛化到整个测试数据集上</li>
+<li>检测过拟合的明显方法：测试集的准确率随训练变化不再提升。</li>
+<li>traing_data test_data validation_data: 在每个迭代周期之后都计算模型在validation_data的准确率，防止饱和。(hold out 方法)</li>
 </ul>
 
           
