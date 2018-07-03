@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="##神经网络学习###代价函数  二次代价函数 $$c=\frac{(y-a)^2}{2}$$">
+<meta name="description" content="神经网络学习 代价函数 二次代价函数 $$c=\frac{(y-a)^2}{2}$$   交叉熵代价函数 $$c=-\frac{1}{n}\sum_{x}{y\ln{a}+(1-y)\ln(1-a)}$$ 每一项都是非负，对数函数定义域a的范围是(0,1) 目标值和真实值很近时，代价趋近于0">
 <meta name="keywords" content="deep learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="netual_network">
 <meta property="og:url" content="http://yoursite.com/2018/07/03/netual-network/index.html">
 <meta property="og:site_name" content="Lin&#39;s Notes">
-<meta property="og:description" content="##神经网络学习###代价函数  二次代价函数 $$c=\frac{(y-a)^2}{2}$$">
+<meta property="og:description" content="神经网络学习 代价函数 二次代价函数 $$c=\frac{(y-a)^2}{2}$$   交叉熵代价函数 $$c=-\frac{1}{n}\sum_{x}{y\ln{a}+(1-y)\ln(1-a)}$$ 每一项都是非负，对数函数定义域a的范围是(0,1) 目标值和真实值很近时，代价趋近于0">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-03T12:45:29.373Z">
+<meta property="og:updated_time" content="2018-07-03T13:25:02.213Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="netual_network">
-<meta name="twitter:description" content="##神经网络学习###代价函数  二次代价函数 $$c=\frac{(y-a)^2}{2}$$">
+<meta name="twitter:description" content="神经网络学习 代价函数 二次代价函数 $$c=\frac{(y-a)^2}{2}$$   交叉熵代价函数 $$c=-\frac{1}{n}\sum_{x}{y\ln{a}+(1-y)\ln(1-a)}$$ 每一项都是非负，对数函数定义域a的范围是(0,1) 目标值和真实值很近时，代价趋近于0">
 
 
 
@@ -361,10 +361,17 @@
       
 
       
-        <h2 id="神经网络学习"><a href="#神经网络学习" class="headerlink" title="##神经网络学习"></a>##神经网络学习</h2><p>###代价函数</p>
-<ul>
+        <h2 id="神经网络学习"><a href="#神经网络学习" class="headerlink" title="神经网络学习"></a>神经网络学习</h2><hr>
+<h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><ul>
 <li>二次代价函数<ul>
 <li>$$c=\frac{(y-a)^2}{2}$$</li>
+</ul>
+</li>
+<li>交叉熵代价函数<ul>
+<li>$$c=-\frac{1}{n}\sum_{x}{y\ln{a}+(1-y)\ln(1-a)}$$</li>
+<li>每一项都是非负，对数函数定义域a的范围是(0,1)</li>
+<li>目标值和真实值很近时，代价趋近于0</li>
+<li></li>
 </ul>
 </li>
 </ul>
@@ -558,7 +565,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#神经网络学习"><span class="nav-number">1.</span> <span class="nav-text">##神经网络学习</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#神经网络学习"><span class="nav-number">1.</span> <span class="nav-text">神经网络学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代价函数"><span class="nav-number">1.1.</span> <span class="nav-text">代价函数</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -875,6 +882,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

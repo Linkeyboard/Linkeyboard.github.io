@@ -361,10 +361,17 @@
       
         
           
-            <h2 id="神经网络学习"><a href="#神经网络学习" class="headerlink" title="##神经网络学习"></a>##神经网络学习</h2><p>###代价函数</p>
-<ul>
+            <h2 id="神经网络学习"><a href="#神经网络学习" class="headerlink" title="神经网络学习"></a>神经网络学习</h2><hr>
+<h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><ul>
 <li>二次代价函数<ul>
 <li>$$c=\frac{(y-a)^2}{2}$$</li>
+</ul>
+</li>
+<li>交叉熵代价函数<ul>
+<li>$$c=-\frac{1}{n}\sum_{x}{y\ln{a}+(1-y)\ln(1-a)}$$</li>
+<li>每一项都是非负，对数函数定义域a的范围是(0,1)</li>
+<li>目标值和真实值很近时，代价趋近于0</li>
+<li></li>
 </ul>
 </li>
 </ul>
@@ -530,8 +537,7 @@
 
       
         
-          <p>#vim配置了解一下</p>
-<hr>
+          <h1 id="vim配置了解一下"><a href="#vim配置了解一下" class="headerlink" title="vim配置了解一下"></a>vim配置了解一下</h1><hr>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/06/30/vim/#more" rel="contents">
@@ -1108,6 +1114,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
