@@ -14,8 +14,8 @@ mathjax: true
     * 求导 $$\frac{\partial C}{\partial w}=(a-y)\sigma'(z)x$$ $$\frac{\partial C}{\partial b}=(a-y)\sigma'(z)$$
 - 交叉熵代价函数
     * $$c=-\frac{1}{n}\sum_{x}{y\ln{a}+(1-y)\ln(1-a)}$$
-     * 每一项都是非负，对数函数定义域a的范围是(0,1)
-     * 目标值和真实值很近时，代价趋近于0
+    * 每一项都是非负，对数函数定义域a的范围是(0,1)
+    * 目标值和真实值很近时，代价趋近于0
     * $$\sigma'(z)=\sigma(z)(1-\sigma(z))$$
      * 求导 $$\frac{\partial C}{\partial w_j} = \frac{1}{n}\sum_x x_j(\sigma(z)-y)$$ $$\frac{\partial C}{\partial b} = \frac{1}{n}\sum_x (\sigma(z)-y)$$
      * 从导数中可以看到学习速率加快
@@ -39,14 +39,4 @@ mathjax: true
     * 也叫权重衰减，直觉上选择较小的权重。（奥卡姆剃刀原则，选择更简单的解释）。学习局部噪音更加困难，不会因为输入的改变发生较大的变化，对经常出现的证据进行反应，可以抵抗噪音。
     * $$\frac{\partial C}{\partial w}=\frac{\partial C_0}{\partial w}+\frac{\lambda}{n}w$$
 - L1规范化
-    * $$C=C_0+\frac{\lambda}{n}\sum_w |w|$$
-     * $$\frac{\partial C}{\partial w}=\frac{\partial C_0}{\partial w}+\frac{\lambda}{n}sign(w)$$
-     * 当w绝对值很大时，L2规范化权重缩小多，当w绝对值很小时，L1规范化权重缩小多。最终的结果是，L1规范化倾向于聚集网络权重在相对少量的高重要度连接上。
-     
- - 弃权
- 	* 弃权不改变损失函数，改变网络结构。每次训练隐藏一半的神经元，输入输出层不变，反向传播修改参数。
- 	* 运行整个网络时，相当于两倍的隐藏神经元被激活，为了补偿这个，将隐藏神经元的权重减半。
- 	* 相当于两（多）个网络叠加到一起。
- - 人为扩展训练数据
- 	*  旋转
- 	* 弹性扭曲
+    * $$c$$
