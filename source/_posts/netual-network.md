@@ -1,8 +1,8 @@
 ---
-title: netual_network
+title: netual network
 date: 2018-07-03 20:31:41
 tags: deep learning
-categorites: paper reading
+categories: paper reading
 mathjax: true
 ---
 ## 神经网络学习
