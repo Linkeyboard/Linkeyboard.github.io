@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="deep learning," />
+  <meta name="keywords" content="CNN," />
 
 
 
@@ -88,18 +88,20 @@
 
 
 
-<meta name="description" content="神经网络学习">
-<meta name="keywords" content="deep learning">
+<meta name="description" content="卷积神经网络三个基本概念：局部感受野(local receptive fields),共享权重(shared weights),混合(pooling)">
+<meta name="keywords" content="CNN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="netual network">
-<meta property="og:url" content="http://yoursite.com/2018/07/03/netual-network/index.html">
+<meta property="og:title" content="卷积神经网络">
+<meta property="og:url" content="http://yoursite.com/2018/07/04/cnn/index.html">
 <meta property="og:site_name" content="Hunting">
-<meta property="og:description" content="神经网络学习">
+<meta property="og:description" content="卷积神经网络三个基本概念：局部感受野(local receptive fields),共享权重(shared weights),混合(pooling)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-05T13:53:42.211Z">
+<meta property="og:image" content="http://yoursite.com/images/1.png">
+<meta property="og:updated_time" content="2018-07-05T05:01:29.014Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="netual network">
-<meta name="twitter:description" content="神经网络学习">
+<meta name="twitter:title" content="卷积神经网络">
+<meta name="twitter:description" content="卷积神经网络三个基本概念：局部感受野(local receptive fields),共享权重(shared weights),混合(pooling)">
+<meta name="twitter:image" content="http://yoursite.com/images/1.png">
 
 
 
@@ -129,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/03/netual-network/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/04/cnn/"/>
 
 
 
 
 
-  <title>netual network | Hunting</title>
+  <title>卷积神经网络 | Hunting</title>
   
 
 
@@ -272,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/03/netual-network/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/cnn/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lin">
@@ -289,7 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">netual network</h1>
+          <h1 class="post-title" itemprop="name headline">卷积神经网络</h1>
         
 
         <div class="post-meta">
@@ -301,8 +303,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-03T20:31:41+08:00">
-                2018-07-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T21:51:58+08:00">
+                2018-07-04
               </time>
             
 
@@ -342,9 +344,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/03/netual-network/#comments" itemprop="discussionUrl">
+                <a href="/2018/07/04/cnn/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/07/03/netual-network/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/07/04/cnn/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -352,7 +354,7 @@
 
           
           
-             <span id="/2018/07/03/netual-network/" class="leancloud_visitors" data-flag-title="netual network">
+             <span id="/2018/07/04/cnn/" class="leancloud_visitors" data-flag-title="卷积神经网络">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,73 +385,8 @@
       
 
       
-        <h2 id="神经网络学习"><a href="#神经网络学习" class="headerlink" title="神经网络学习"></a>神经网络学习</h2><hr>
-<a id="more"></a>
-<h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><ul>
-<li>二次代价函数<ul>
-<li>$$c=\frac{(y-a)^2}{2}$$</li>
-<li>人工神经元在犯错比较明显的时候学习速率很慢</li>
-<li>求导 $$\frac{\partial C}{\partial w}=(a-y)\sigma’(z)x$$ $$\frac{\partial C}{\partial b}=(a-y)\sigma’(z)$$</li>
-</ul>
-</li>
-<li>交叉熵代价函数<ul>
-<li>$$c=-\frac{1}{n}\sum_{x}{y\ln{a}+(1-y)\ln(1-a)}$$<ul>
-<li>每一项都是非负，对数函数定义域a的范围是(0,1)</li>
-<li>目标值和真实值很近时，代价趋近于0</li>
-</ul>
-</li>
-<li>$$\sigma’(z)=\sigma(z)(1-\sigma(z))$$<ul>
-<li>求导 $$\frac{\partial C}{\partial w_j} = \frac{1}{n}\sum_x x_j(\sigma(z)-y)$$ $$\frac{\partial C}{\partial b} = \frac{1}{n}\sum_x (\sigma(z)-y)$$</li>
-<li>从导数中可以看到学习速率加快</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h3><ul>
-<li>四个参数可以画出来一头大象，五个参数能让他卷鼻子（Joke :D）</li>
-<li>代价函数持续减小但是测试分类正确率波动稳步不前，<code>单纯记忆训练集合，没有对数字本质进行理解，泛化到整个测试数据集上</code></li>
-<li>检测过拟合的明显方法：<code>测试集的准确率随训练变化不再提升。</code></li>
-<li>traing_data test_data validation_data: 在每个<code>迭代周期</code>之后都计算模型在validation_data的准确率，防止饱和。(hold out 方法)</li>
-<li>防止过拟合的方法<ul>
-<li>增加训练数据规模</li>
-<li>hold out, validation data验证每个周期后的准确率</li>
-<li>规范化</li>
-<li>弃权？</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="规范化"><a href="#规范化" class="headerlink" title="规范化"></a>规范化</h3><ul>
-<li>L2规范化<ul>
-<li>$$C=C_0+\frac{\lambda}{2n}\sum_w w^2$$</li>
-<li>也叫权重衰减，直觉上选择较小的权重。（奥卡姆剃刀原则，选择更简单的解释）。<code>学习局部噪音更加困难，不会因为输入的改变发生较大的变化，对经常出现的证据进行反应，可以抵抗噪音。</code></li>
-<li>$$\frac{\partial C}{\partial w}=\frac{\partial C_0}{\partial w}+\frac{\lambda}{n}w$$</li>
-</ul>
-</li>
-<li><p>L1规范化</p>
-<ul>
-<li>$$C=C_0+\frac{\lambda}{n}\sum_w |w|$$</li>
-<li>$$\frac{\partial C}{\partial w}=\frac{\partial C_0}{\partial w}+\frac{\lambda}{n}sign(w)$$</li>
-<li>当w绝对值很大时，L2规范化权重缩小多，当w绝对值很小时，L1规范化权重缩小多。最终的结果是，L1规范化倾向于<code>聚集网络权重在相对少量的高重要度连接上。</code></li>
-</ul>
-</li>
-<li><p>弃权</p>
-<ul>
-<li>弃权不改变损失函数，改变网络结构。每次训练隐藏一半的神经元，输入输出层不变，反向传播修改参数。</li>
-<li>运行整个网络时，相当于两倍的隐藏神经元被激活，为了补偿这个，将隐藏神经元的权重减半。</li>
-<li>相当于两（多）个网络叠加到一起。</li>
-</ul>
-</li>
-<li>人为扩展训练数据<ul>
-<li>旋转</li>
-<li>弹性扭曲</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="权重初始化"><a href="#权重初始化" class="headerlink" title="权重初始化"></a>权重初始化</h3><p>&emsp;假设训练使用1000个输入神经元，权重初始化为均值为0，标准差为1的高斯分布，其中500个输入神经元的值为0，500个为1。$z=\sum_j w_j x_j + b$,剩下500个权重项和1个额外的偏置项。所以z本身是一个均值为0,方差为$\sqrt{501}$,因此使用均值为0，标准差为$\sqrt{n_in}$的高斯分布来初始化<code>权重</code>，容易证明z是均差为0，标准差为$\sqrt{\frac{3}{2}}$的高斯分布。这样z集中分布在-1~1附近。</p>
+        <h2 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h2><p>三个基本概念：局部感受野(local receptive fields),共享权重(shared weights),混合(pooling)</p>
+<p><img src="/images/1.png" alt="Local receptive fields" title="This is a title"></p>
 
       
     </div>
@@ -467,7 +404,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/deep-learning/" rel="tag"># deep learning</a>
+            <a href="/tags/CNN/" rel="tag"># CNN</a>
           
         </div>
       
@@ -480,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/30/vim/" rel="next" title="vim指令">
-                <i class="fa fa-chevron-left"></i> vim指令
+              <a href="/2018/07/03/netual-network/" rel="next" title="netual network">
+                <i class="fa fa-chevron-left"></i> netual network
               </a>
             
           </div>
@@ -489,10 +426,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/04/cnn/" rel="prev" title="卷积神经网络">
-                卷积神经网络 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -644,7 +577,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#神经网络学习"><span class="nav-number">1.</span> <span class="nav-text">神经网络学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代价函数"><span class="nav-number">1.1.</span> <span class="nav-text">代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#过拟合"><span class="nav-number">1.2.</span> <span class="nav-text">过拟合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#规范化"><span class="nav-number">1.3.</span> <span class="nav-text">规范化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#权重初始化"><span class="nav-number">1.4.</span> <span class="nav-text">权重初始化</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#卷积神经网络"><span class="nav-number">1.</span> <span class="nav-text">卷积神经网络</span></a></li></ol></div>
             
 
           </div>
@@ -808,9 +741,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/07/03/netual-network/';
-          this.page.identifier = '2018/07/03/netual-network/';
-          this.page.title = 'netual network';
+          this.page.url = 'http://yoursite.com/2018/07/04/cnn/';
+          this.page.identifier = '2018/07/04/cnn/';
+          this.page.title = '卷积神经网络';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://Lkk.disqus.com/embed.js';

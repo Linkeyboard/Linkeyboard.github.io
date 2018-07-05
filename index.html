@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -102,9 +102,9 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -149,7 +149,7 @@
     
   
 
-  <div class="container sidebar-position-right 
+  <div class="container sidebar-position-left 
   page-home">
     <div class="headband"></div>
 
@@ -268,7 +268,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/卷积神经网络/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/cnn/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lin">
@@ -287,7 +287,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/04/卷积神经网络/" itemprop="url">卷积神经网络</a></h1>
+                <a class="post-title-link" href="/2018/07/04/cnn/" itemprop="url">卷积神经网络</a></h1>
         
 
         <div class="post-meta">
@@ -322,8 +322,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Paper-reading/" itemprop="url" rel="index">
-                    <span itemprop="name">Paper reading</span>
+                  <a href="/categories/paper-reading/" itemprop="url" rel="index">
+                    <span itemprop="name">paper reading</span>
                   </a>
                 </span>
 
@@ -340,9 +340,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/04/卷积神经网络/#comments" itemprop="discussionUrl">
+                <a href="/2018/07/04/cnn/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/07/04/卷积神经网络/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/07/04/cnn/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -350,7 +350,7 @@
 
           
           
-             <span id="/2018/07/04/卷积神经网络/" class="leancloud_visitors" data-flag-title="卷积神经网络">
+             <span id="/2018/07/04/cnn/" class="leancloud_visitors" data-flag-title="卷积神经网络">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -384,6 +384,7 @@
         
           
             <h2 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h2><p>三个基本概念：局部感受野(local receptive fields),共享权重(shared weights),混合(pooling)</p>
+<p><img src="/images/1.png" alt="Local receptive fields" title="This is a title"></p>
 
           
         
@@ -546,73 +547,14 @@
 
       
         
-          
-            <h2 id="神经网络学习"><a href="#神经网络学习" class="headerlink" title="神经网络学习"></a>神经网络学习</h2><hr>
-<h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><ul>
-<li>二次代价函数<ul>
-<li>$$c=\frac{(y-a)^2}{2}$$</li>
-<li>人工神经元在犯错比较明显的时候学习速率很慢</li>
-<li>求导 $$\frac{\partial C}{\partial w}=(a-y)\sigma’(z)x$$ $$\frac{\partial C}{\partial b}=(a-y)\sigma’(z)$$</li>
-</ul>
-</li>
-<li>交叉熵代价函数<ul>
-<li>$$c=-\frac{1}{n}\sum_{x}{y\ln{a}+(1-y)\ln(1-a)}$$<ul>
-<li>每一项都是非负，对数函数定义域a的范围是(0,1)</li>
-<li>目标值和真实值很近时，代价趋近于0</li>
-</ul>
-</li>
-<li>$$\sigma’(z)=\sigma(z)(1-\sigma(z))$$<ul>
-<li>求导 $$\frac{\partial C}{\partial w_j} = \frac{1}{n}\sum_x x_j(\sigma(z)-y)$$ $$\frac{\partial C}{\partial b} = \frac{1}{n}\sum_x (\sigma(z)-y)$$</li>
-<li>从导数中可以看到学习速率加快</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h3><ul>
-<li>四个参数可以画出来一头大象，五个参数能让他卷鼻子（Joke :D）</li>
-<li>代价函数持续减小但是测试分类正确率波动稳步不前，<code>单纯记忆训练集合，没有对数字本质进行理解，泛化到整个测试数据集上</code></li>
-<li>检测过拟合的明显方法：<code>测试集的准确率随训练变化不再提升。</code></li>
-<li>traing_data test_data validation_data: 在每个<code>迭代周期</code>之后都计算模型在validation_data的准确率，防止饱和。(hold out 方法)</li>
-<li>防止过拟合的方法<ul>
-<li>增加训练数据规模</li>
-<li>hold out, validation data验证每个周期后的准确率</li>
-<li>规范化</li>
-<li>弃权？</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="规范化"><a href="#规范化" class="headerlink" title="规范化"></a>规范化</h3><ul>
-<li>L2规范化<ul>
-<li>$$C=C_0+\frac{\lambda}{2n}\sum_w w^2$$</li>
-<li>也叫权重衰减，直觉上选择较小的权重。（奥卡姆剃刀原则，选择更简单的解释）。<code>学习局部噪音更加困难，不会因为输入的改变发生较大的变化，对经常出现的证据进行反应，可以抵抗噪音。</code></li>
-<li>$$\frac{\partial C}{\partial w}=\frac{\partial C_0}{\partial w}+\frac{\lambda}{n}w$$</li>
-</ul>
-</li>
-<li><p>L1规范化</p>
-<ul>
-<li>$$C=C_0+\frac{\lambda}{n}\sum_w |w|$$</li>
-<li>$$\frac{\partial C}{\partial w}=\frac{\partial C_0}{\partial w}+\frac{\lambda}{n}sign(w)$$</li>
-<li>当w绝对值很大时，L2规范化权重缩小多，当w绝对值很小时，L1规范化权重缩小多。最终的结果是，L1规范化倾向于<code>聚集网络权重在相对少量的高重要度连接上。</code></li>
-</ul>
-</li>
-<li><p>弃权</p>
-<ul>
-<li>弃权不改变损失函数，改变网络结构。每次训练隐藏一半的神经元，输入输出层不变，反向传播修改参数。</li>
-<li>运行整个网络时，相当于两倍的隐藏神经元被激活，为了补偿这个，将隐藏神经元的权重减半。</li>
-<li>相当于两（多）个网络叠加到一起。</li>
-</ul>
-</li>
-<li>人为扩展训练数据<ul>
-<li>旋转</li>
-<li>弹性扭曲</li>
-</ul>
-</li>
-</ul>
-
-          
+          <h2 id="神经网络学习"><a href="#神经网络学习" class="headerlink" title="神经网络学习"></a>神经网络学习</h2><hr>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/03/netual-network/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1021,7 +963,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1180,6 +1122,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
 
