@@ -2,12 +2,11 @@
 title: 卷积神经网络
 date: 2018-07-04 21:51:58
 tags: CNN
-categories: Paper reading
+categories: paper reading
 mathjax: true
 ---
 ## 卷积神经网络
 三个基本概念：局部感受野(local receptive fields),共享权重(shared weights),混合(pooling)
 
 
-
-
+![Local receptive fields](/images/1.png  "This is a title")
