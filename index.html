@@ -268,6 +268,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/卷积神经网络/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://media.openjudge.cn/users/196/111196_avatar_large.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hunting">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/04/卷积神经网络/" itemprop="url">卷积神经网络</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T21:51:58+08:00">
+                2018-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Paper-reading/" itemprop="url" rel="index">
+                    <span itemprop="name">Paper reading</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/04/卷积神经网络/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/07/04/卷积神经网络/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/07/04/卷积神经网络/" class="leancloud_visitors" data-flag-title="卷积神经网络">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h2><p>三个基本概念：局部感受野(local receptive fields),共享权重(shared weights),混合(pooling)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/03/netual-network/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -408,9 +572,9 @@
 <hr>
 <h3 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h3><ul>
 <li>四个参数可以画出来一头大象，五个参数能让他卷鼻子（Joke :D）</li>
-<li>代价函数持续减小但是测试分类正确率波动稳步不前，单纯记忆训练集合，没有对数字本质进行理解，泛化到整个测试数据集上</li>
-<li>检测过拟合的明显方法：测试集的准确率随训练变化不再提升。</li>
-<li>traing_data test_data validation_data: 在每个迭代周期之后都计算模型在validation_data的准确率，防止饱和。(hold out 方法)</li>
+<li>代价函数持续减小但是测试分类正确率波动稳步不前，<code>单纯记忆训练集合，没有对数字本质进行理解，泛化到整个测试数据集上</code></li>
+<li>检测过拟合的明显方法：<code>测试集的准确率随训练变化不再提升。</code></li>
+<li>traing_data test_data validation_data: 在每个<code>迭代周期</code>之后都计算模型在validation_data的准确率，防止饱和。(hold out 方法)</li>
 <li>防止过拟合的方法<ul>
 <li>增加训练数据规模</li>
 <li>hold out, validation data验证每个周期后的准确率</li>
@@ -423,20 +587,19 @@
 <h3 id="规范化"><a href="#规范化" class="headerlink" title="规范化"></a>规范化</h3><ul>
 <li>L2规范化<ul>
 <li>$$C=C_0+\frac{\lambda}{2n}\sum_w w^2$$</li>
-<li>也叫权重衰减，直觉上选择较小的权重。（奥卡姆剃刀原则，选择更简单的解释）。学习局部噪音更加困难，不会因为输入的改变发生较大的变化，对经常出现的证据进行反应，可以抵抗噪音。</li>
+<li>也叫权重衰减，直觉上选择较小的权重。（奥卡姆剃刀原则，选择更简单的解释）。<code>学习局部噪音更加困难，不会因为输入的改变发生较大的变化，对经常出现的证据进行反应，可以抵抗噪音。</code></li>
 <li>$$\frac{\partial C}{\partial w}=\frac{\partial C_0}{\partial w}+\frac{\lambda}{n}w$$</li>
 </ul>
 </li>
 <li><p>L1规范化</p>
 <ul>
-<li>$$C=C_0+\frac{\lambda}{n}\sum_w |w|$$<ul>
+<li>$$C=C_0+\frac{\lambda}{n}\sum_w |w|$$</li>
 <li>$$\frac{\partial C}{\partial w}=\frac{\partial C_0}{\partial w}+\frac{\lambda}{n}sign(w)$$</li>
-<li>当w绝对值很大时，L2规范化权重缩小多，当w绝对值很小时，L1规范化权重缩小多。最终的结果是，L1规范化倾向于聚集网络权重在相对少量的高重要度连接上。</li>
+<li>当w绝对值很大时，L2规范化权重缩小多，当w绝对值很小时，L1规范化权重缩小多。最终的结果是，L1规范化倾向于<code>聚集网络权重在相对少量的高重要度连接上。</code></li>
 </ul>
 </li>
-</ul>
+<li><p>弃权</p>
 <ul>
-<li>弃权<ul>
 <li>弃权不改变损失函数，改变网络结构。每次训练隐藏一半的神经元，输入输出层不变，反向传播修改参数。</li>
 <li>运行整个网络时，相当于两倍的隐藏神经元被激活，为了补偿这个，将隐藏神经元的权重减半。</li>
 <li>相当于两（多）个网络叠加到一起。</li>
@@ -445,8 +608,6 @@
 <li>人为扩展训练数据<ul>
 <li>旋转</li>
 <li>弹性扭曲</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -849,7 +1010,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -860,7 +1021,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -871,7 +1032,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
