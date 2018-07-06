@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Hunting">
 <meta property="og:description" content="神经网络学习">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-05T13:53:42.211Z">
+<meta property="og:updated_time" content="2018-07-06T01:15:44.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="netual network">
 <meta name="twitter:description" content="神经网络学习">
@@ -449,7 +449,11 @@
 </li>
 </ul>
 <hr>
-<h3 id="权重初始化"><a href="#权重初始化" class="headerlink" title="权重初始化"></a>权重初始化</h3><p>&emsp;假设训练使用1000个输入神经元，权重初始化为均值为0，标准差为1的高斯分布，其中500个输入神经元的值为0，500个为1。$z=\sum_j w_j x_j + b$,剩下500个权重项和1个额外的偏置项。所以z本身是一个均值为0,方差为$\sqrt{501}$,因此使用均值为0，标准差为$\sqrt{n_in}$的高斯分布来初始化<code>权重</code>，容易证明z是均差为0，标准差为$\sqrt{\frac{3}{2}}$的高斯分布。这样z集中分布在-1~1附近。</p>
+<h3 id="权重初始化"><a href="#权重初始化" class="headerlink" title="权重初始化"></a>权重初始化</h3><p>&emsp;假设训练使用1000个输入神经元，权重初始化为均值为0，标准差为1的高斯分布，其中500个输入神经元的值为0，500个为1。$z=\sum_j w_j x_j + b$,剩下500个权重项和1个额外的偏置项。所以z本身是一个均值为0,方差为$\sqrt{501}$的高斯分布,因此使用均值为0，标准差为$\sqrt{n_{in}}$的高斯分布来初始化<code>权重</code>，容易证明z是均差为0，标准差为$\sqrt{\frac{3}{2}}$的高斯分布。这样z集中分布在-1~1附近。<br>Tips:</p>
+<ul>
+<li>独立随机变量和的方差是每个随机独立变量的方差之和</li>
+<li>方差是标准差的平方。</li>
+</ul>
 
       
     </div>
