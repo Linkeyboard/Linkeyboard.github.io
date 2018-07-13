@@ -268,6 +268,152 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/13/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://media.openjudge.cn/users/196/111196_avatar_large.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hunting">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/13/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T22:36:02+08:00">
+                2018-07-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/13/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/07/13/hello-world/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/07/13/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          Basic commands in hexo
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/13/hello-world/">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/13/Tree-chain/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -724,6 +870,22 @@
       
         
           <h2 id="神经网络学习"><a href="#神经网络学习" class="headerlink" title="神经网络学习"></a>神经网络学习</h2><hr>
+<h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><ul>
+<li>二次代价函数<ul>
+<li>$$c=\frac{(y-a)^2}{2}$$</li>
+<li>人工神经元在犯错比较明显的时候学习速率很慢</li>
+<li>求导 $$\frac{\partial C}{\partial w}=(a-y)\sigma’(z)x$$ $$\frac{\partial C}{\partial b}=(a-y)\sigma’(z)$$</li>
+</ul>
+</li>
+<li>交叉熵代价函数<ul>
+<li>$$c=-\frac{1}{n}\sum_{x}{y\ln{a}+(1-y)\ln(1-a)}$$<ul>
+<li>每一项都是非负，对数函数定义域a的范围是(0,1)</li>
+<li>目标值和真实值很近时，代价趋近于0</li>
+</ul>
+</li>
+<li>$$\sigma’(z)=\sigma(z)(1-\sigma(z))$$<ul>
+<li>求导 $$\frac{\partial C}{\partial w_j} = \frac{1}{n}\sum_x x_j(\sigma(z)-y)$$ $$\frac{\partial C}{\partial b} = \frac{1}{n}\sum_x (\sigma(z)-y)$$</li>
+<li>从导数中可以看到学习速率加快
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/03/netual-network/#more" rel="contents">
@@ -892,155 +1054,16 @@
       
         
           <h1 id="vim配置了解一下"><a href="#vim配置了解一下" class="headerlink" title="vim配置了解一下"></a>vim配置了解一下</h1><hr>
+<ul>
+<li>移动<ul>
+<li>jklh</li>
+<li>$(本行末尾) 0(本行开始) ^(本行非空格的第一个字符)</li>
+<li>G(文件最后一行) gg(文件第一行)</li>
+<li>w e</li>
+<li>相同单词移动 *
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/06/30/vim/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/30/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://media.openjudge.cn/users/196/111196_avatar_large.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hunting">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/30/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-30T21:28:02+08:00">
-                2018-06-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/06/30/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/06/30/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/06/30/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          Basic commands in hexo
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/30/hello-world/">
               阅读全文 &raquo;
             </a>
           </div>
