@@ -7,7 +7,6 @@ mathjax: true
 ---
 ## 神经网络学习
 ---
-<!-- more -->
 ### 代价函数
 - 二次代价函数
     * $$c=\frac{(y-a)^2}{2}$$
@@ -20,6 +19,7 @@ mathjax: true
     * $$\sigma'(z)=\sigma(z)(1-\sigma(z))$$
      * 求导 $$\frac{\partial C}{\partial w_j} = \frac{1}{n}\sum_x x_j(\sigma(z)-y)$$ $$\frac{\partial C}{\partial b} = \frac{1}{n}\sum_x (\sigma(z)-y)$$
      * 从导数中可以看到学习速率加快
+<!-- more -->
     
 ---
 ### 过拟合
