@@ -1,5 +1,5 @@
 ---
-title: Tree_chain
+title: 树链剖分入门
 date: 2018-07-13 22:04:39
 tags: 树链剖分
 categories: ACM
@@ -13,7 +13,7 @@ categories: ACM
 - w[v]:v与其父亲节点的连边在线段树中的位置
 - top[v]:v所在的重链的顶端节点
 - size[v]:v包含的子树节点
-- 重链:与重儿子连起来的节点
+- 重链:与重儿子连起来的边
 
 <!-- more -->
 ---

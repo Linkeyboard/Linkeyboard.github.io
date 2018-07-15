@@ -186,6 +186,7 @@ void update(int u,int k,int c){
         Tree[u].minn=c;
         return;
     }
+    if(Tree[u].neg) push_down(u);
     int mid=(Tree[u].l+Tree[u].r)>>1;
     if(k<=mid) update(u<<1,k,c);
     else update((u<<1)|1,k,c);
