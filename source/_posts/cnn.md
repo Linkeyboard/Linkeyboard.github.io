@@ -9,4 +9,4 @@ mathjax: true
 三个基本概念：局部感受野(local receptive fields),共享权重(shared weights),混合(pooling)
 
 
-![Local receptive fields](/images/1.png  "This is a title")
+![Local receptive fields](/images/1.png  "CNN")
