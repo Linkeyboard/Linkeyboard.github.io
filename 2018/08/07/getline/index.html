@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="getline," />
 
 
 
@@ -88,14 +88,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="#接受空格输入  gets() //可能会报错 fgets(str,count,stdin); cin.getline(str,count); getline(cin,str);(str为string)   #string转char[]  string.c_str() 返回char指针 strcpy(tmp,str.c_str());   #char[]转string  string tmp(st">
+<meta name="keywords" content="getline">
+<meta property="og:type" content="article">
+<meta property="og:title" content="getline">
+<meta property="og:url" content="http://yoursite.com/2018/08/07/getline/index.html">
 <meta property="og:site_name" content="Hunting">
+<meta property="og:description" content="#接受空格输入  gets() //可能会报错 fgets(str,count,stdin); cin.getline(str,count); getline(cin,str);(str为string)   #string转char[]  string.c_str() 返回char指针 strcpy(tmp,str.c_str());   #char[]转string  string tmp(st">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-30T13:28:02.488Z">
+<meta property="og:updated_time" content="2018-08-07T13:12:20.091Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="getline">
+<meta name="twitter:description" content="#接受空格输入  gets() //可能会报错 fgets(str,count,stdin); cin.getline(str,count); getline(cin,str);(str为string)   #string转char[]  string.c_str() 返回char指针 strcpy(tmp,str.c_str());   #char[]转string  string tmp(st">
 
 
 
@@ -125,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/07/getline/"/>
 
 
 
 
 
-  <title>about | Hunting</title>
+  <title>getline | Hunting</title>
   
 
 
@@ -256,33 +260,191 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/07/getline/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://media.openjudge.cn/users/196/111196_avatar_large.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hunting">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">getline</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-07T21:06:10+08:00">
+                2018-08-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/07/getline/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/08/07/getline/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/08/07/getline/" class="leancloud_visitors" data-flag-title="getline">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>#接受空格输入</p>
+<ol>
+<li>gets() //可能会报错</li>
+<li>fgets(str,count,stdin);</li>
+<li>cin.getline(str,count);</li>
+<li>getline(cin,str);(str为string)</li>
+</ol>
+<hr>
+<p>#string转char[]</p>
+<ul>
+<li>string.c_str() 返回char指针</li>
+<li>strcpy(tmp,str.c_str());</li>
+</ul>
+<hr>
+<p>#char[]转string</p>
+<ul>
+<li>string tmp(str);</li>
+<li>string tmp=str;</li>
+<li>string tmp;tmp=str;</li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/getline/" rel="tag"># getline</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/22/JVET-CNN/" rel="next" title="(J0034)CNN-based driving of block partitioning for intra slices encoding">
+                <i class="fa fa-chevron-left"></i> (J0034)CNN-based driving of block partitioning for intra slices encoding
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -548,9 +710,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/about/index.html';
-          this.page.identifier = 'about/index.html';
-          this.page.title = 'about';
+          this.page.url = 'http://yoursite.com/2018/08/07/getline/';
+          this.page.identifier = '2018/08/07/getline/';
+          this.page.title = 'getline';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://Lkk.disqus.com/embed.js';
